@@ -36,6 +36,24 @@ body {
   display: none !important;
 }
 
+/* Back button inside nav */
+.nav-close-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 10px 24px;
+  cursor: pointer;
+  display: block;
+  text-align: left;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.nav-close-btn:hover {
+  color: #64FFDA;
+}
+
 /* Hide menu by default, slide in when shown */
 .nav-menu {
   display: none;
@@ -103,6 +121,11 @@ section h3 {
 ul, ol {
   margin-top: 0;
   margin-bottom: 8px;
+}
+
+.job, .skills-grid, .job ul, .skills-grid ul {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .hero {
