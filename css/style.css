@@ -25,6 +25,11 @@ body {
   background: #14213d;
 }
 
+/* Hide hamburger when menu is open */
+body.menu-open .nav-btn {
+  display: none !important;
+}
+
 /* Hide menu by default, slide in when shown */
 .nav-menu {
   display: none;
