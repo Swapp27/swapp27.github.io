@@ -71,7 +71,7 @@ body {
 
 /* Hero and rest of site styles */
 section {
-  padding: 40px 20px;
+  padding: 20px 20px;
   min-height: 0;
 }
 
@@ -85,7 +85,7 @@ section h2 {
 .hero {
   text-align: center;
   background: #f9f9f9;
-  padding-top: 120px;
+  padding-top: 50px;
 }
 .hero img {
   width: 180px;
@@ -120,7 +120,7 @@ section h2 {
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
 }
 .skills-grid > div {
   flex: 1;
@@ -128,7 +128,7 @@ section h2 {
 }
 
 ul { list-style: disc inside; }
-.job { margin-bottom: 30px; }
+.job { margin-bottom: 10px; }
 
 #contact p { margin: 10px 0; }
 #contact i { margin-right: 8px; color: #0A192F; }
