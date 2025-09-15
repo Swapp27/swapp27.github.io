@@ -4,39 +4,84 @@ body {
   padding: 0;
   color: #333;
 }
-nav {
+
+/* Hamburger button */
+.nav-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #0A192F;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  z-index: 1100;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 10px 14px;
+  transition: background 0.2s;
+}
+
+.nav-btn:hover {
+  background: #14213d;
+}
+
+/* Hide menu by default, slide in when shown */
+.nav-menu {
+  display: none;
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
+  width: 80vw;
+  max-width: 350px;
+  height: 100vh;
   background: #0A192F;
-  padding: 10px 20px;
-  z-index: 1000;
+  z-index: 1099;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.10);
+  padding-top: 40px;
+  animation: slideIn 0.3s;
 }
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-nav li { margin: 0 15px; }
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  transition: color 0.2s;
-}
-nav a:hover { color: #64FFDA; }
 
+.nav-menu ul {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0 24px;
+}
+
+.nav-menu li {
+  margin: 18px 0;
+}
+
+.nav-menu a {
+  font-size: 1.15rem;
+  color: #fff;
+  display: block;
+  width: 100%;
+}
+
+.nav-menu.show {
+  display: block;
+}
+
+@keyframes slideIn {
+  from { left: -100vw; }
+  to { left: 0; }
+}
+
+/* Hero and rest of site styles */
 section {
   padding: 100px 20px;
   min-height: 60vh;
 }
+
 section h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   margin-bottom: 20px;
   color: #0A192F;
 }
+
 .hero {
   text-align: center;
   background: #f9f9f9;
@@ -57,6 +102,7 @@ section h2 {
   font-size: 1.5rem;
   margin: 10px 0;
 }
+
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -88,6 +134,13 @@ ul { list-style: disc inside; }
 #contact i { margin-right: 8px; color: #0A192F; }
 
 @media(max-width: 600px) {
-  nav ul { flex-direction: column; }
-  nav li { margin: 10px 0; }
+  .nav-menu {
+    width: 95vw;
+  }
+  .nav-btn {
+    top: 12px;
+    left: 12px;
+    font-size: 2rem;
+    padding: 8px 12px;
+  }
 }
