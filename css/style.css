@@ -5,6 +5,12 @@ body {
   color: #333;
 }
 
+.nav-container {
+  position: relative;
+  width: 100%;
+  z-index: 1200;
+}
+
 /* Hamburger button */
 .nav-btn {
   position: fixed;
@@ -14,7 +20,7 @@ body {
   color: #fff;
   border: none;
   font-size: 2rem;
-  z-index: 1100;
+  z-index: 1201;
   cursor: pointer;
   border-radius: 6px;
   padding: 10px 14px;
@@ -25,8 +31,8 @@ body {
   background: #14213d;
 }
 
-/* Hide the hamburger when menu is open */
-body.menu-open .nav-btn {
+/* Hide hamburger when menu is open (new selector!) */
+.nav-container.menu-open .nav-btn {
   display: none !important;
 }
 
@@ -40,10 +46,14 @@ body.menu-open .nav-btn {
   max-width: 350px;
   height: 100vh;
   background: #0A192F;
-  z-index: 1099;
+  z-index: 1200;
   box-shadow: 2px 0 12px rgba(0,0,0,0.10);
   padding-top: 40px;
   animation: slideIn 0.3s;
+}
+
+.nav-menu.show {
+  display: block;
 }
 
 .nav-menu ul {
@@ -65,16 +75,12 @@ body.menu-open .nav-btn {
   width: 100%;
 }
 
-.nav-menu.show {
-  display: block;
-}
-
 @keyframes slideIn {
   from { left: -100vw; }
   to { left: 0; }
 }
 
-/* Hero and rest of site styles */
+/* Sections spacing */
 section {
   padding: 16px 12px;
   margin-bottom: 0;
@@ -97,11 +103,6 @@ section h3 {
 ul, ol {
   margin-top: 0;
   margin-bottom: 8px;
-}
-
-.job, .skills-grid, .job ul, .skills-grid ul {
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
 .hero {
