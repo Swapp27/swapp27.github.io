@@ -13,18 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
   sections.forEach(sec => observer.observe(sec));
 
   // Hamburger and nav logic
+  const navContainer = document.getElementById('navContainer');
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
 
   navToggle.addEventListener('click', function() {
     navMenu.classList.toggle('show');
-    document.body.classList.toggle('menu-open', navMenu.classList.contains('show'));
+    navContainer.classList.toggle('menu-open', navMenu.classList.contains('show'));
   });
 
   document.querySelectorAll('#navMenu a').forEach(link => {
     link.addEventListener('click', function() {
       navMenu.classList.remove('show');
-      document.body.classList.remove('menu-open');
+      navContainer.classList.remove('menu-open');
     });
   });
 });
