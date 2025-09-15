@@ -16,10 +16,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const navContainer = document.getElementById('navContainer');
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
+  const navClose = document.getElementById('navClose');
 
   navToggle.addEventListener('click', function() {
     navMenu.classList.toggle('show');
     navContainer.classList.toggle('menu-open', navMenu.classList.contains('show'));
+  });
+
+  navClose.addEventListener('click', function() {
+    navMenu.classList.remove('show');
+    navContainer.classList.remove('menu-open');
   });
 
   document.querySelectorAll('#navMenu a').forEach(link => {
