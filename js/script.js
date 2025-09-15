@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Section reveal code (unchanged)
+  // Section reveal animation
   const sections = document.querySelectorAll('section');
   const options = { threshold: 0.1 };
   const observer = new IntersectionObserver((entries, obs) => {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }, options);
   sections.forEach(sec => observer.observe(sec));
 
-  // Navigation toggle code
+  // Hamburger and nav logic
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
 
@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.classList.toggle('menu-open', navMenu.classList.contains('show'));
   });
 
-  // Hide menu and restore hamburger when a link is clicked
   document.querySelectorAll('#navMenu a').forEach(link => {
     link.addEventListener('click', function() {
       navMenu.classList.remove('show');
