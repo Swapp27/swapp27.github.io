@@ -25,7 +25,7 @@ body {
   background: #14213d;
 }
 
-/* Hide hamburger when menu is open */
+/* Hide the hamburger when menu is open */
 body.menu-open .nav-btn {
   display: none !important;
 }
