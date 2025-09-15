@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Section reveal code
+  // Section reveal code (unchanged)
   const sections = document.querySelectorAll('section');
   const options = { threshold: 0.1 };
   const observer = new IntersectionObserver((entries, obs) => {
@@ -15,14 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
   // Navigation toggle code
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
+
   navToggle.addEventListener('click', function() {
     navMenu.classList.toggle('show');
+    document.body.classList.toggle('menu-open', navMenu.classList.contains('show'));
   });
 
-  // Hide menu on link click
+  // Hide menu and restore hamburger when a link is clicked
   document.querySelectorAll('#navMenu a').forEach(link => {
     link.addEventListener('click', function() {
       navMenu.classList.remove('show');
+      document.body.classList.remove('menu-open');
     });
   });
 });
